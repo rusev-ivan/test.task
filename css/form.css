@@ -1,0 +1,32 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #bed9a7;
+}
+
+.form-reg {
+    width: 100%;
+    max-width: 330px;
+    padding: 10px;
+    margin: auto;
+}
+
+.form-group {
+    margin: 1px;
+}
+
+.form-control {
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    margin: 1px;
+}
+
+
+
