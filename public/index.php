@@ -21,10 +21,9 @@ $users = [
 ];
 
 $container = new Container();
-$container->bind('users', $users);
-$container->bind(RegForm::class, function (Container $container)
+$container->bind(RegForm::class, function (Container $container) use ($users)
 {
-    return new RegForm($container->get('users'));
+    return new RegForm($users);
 });
 $ctrl = $container->get($class);
 $ctrl();
