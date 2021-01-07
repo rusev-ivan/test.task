@@ -22,7 +22,7 @@ $users = [
 
 $container = new Container();
 $container->bind('users', $users);
-$container->bind('\App\Controllers\RegForm', function (Container $container)
+$container->bind(RegForm::class, function (Container $container)
 {
     return new RegForm($container->get('users'));
 });

@@ -22,19 +22,22 @@ class RegForm extends Controller
         $file = fopen('log.txt', 'a');
 
         // Валидация email
-        if (stristr($_POST['email'], '@') === false) {
+        if (empty($_POST['email']) || filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
             $status[] = 'error';
-            $messages[] = 'В введенном email "' . $_POST['email'] . '" отсутствует символ @';
+            $messages[] = 'Введенный email "' . $_POST['email'] . '" не валидный';
         } else {
             $status[] = 'success';
         }
 
         // Проверка на совпадение введенных паролей
-        if ($_POST['pass'] === $_POST['passRetry']) {
-            $status[] = 'success';
-        } else {
+        if (empty($_POST['pass']) || empty($_POST['passRetry'])) {
+            $status[] = 'error';
+            $messages[] = "\n" . 'Поле с паролем пустое';
+        } elseif ($_POST['pass'] !== $_POST['passRetry']) {
             $status[] = 'error';
             $messages[] = "\n" . 'Введенные пароли не совпадают';
+        } else {
+            $status[] = 'success';
         }
 
         //Проверка на существование введенного пользователя

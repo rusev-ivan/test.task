@@ -18,23 +18,23 @@
     <form class="form-reg" action="/regForm" method="post">
         <div class="form-group">
             <label for="name" class="control-label">Имя</label>
-            <input type="text" name="name" class="form-control" placeholder="Имя" required autofocus>
+            <input type="text" name="name" class="form-control" placeholder="Имя"  autofocus>
         </div>
         <div class="form-group">
             <label for="surname" class="control-label">Фамилия</label>
-            <input type="text" name="surname" class="form-control" placeholder="Фамилия" required>
+            <input type="text" name="surname" class="form-control" placeholder="Фамилия" >
         </div>
         <div class="form-group">
             <label for="email" class="control-label">Email</label>
-            <input type="email" name="email" class="form-control" placeholder="Email address" required>
+            <input type="text" name="email" class="form-control" placeholder="Email address" >
         </div>
         <div class="form-group">
             <label for="pass" class="control-label">Пароль</label>
-            <input type="password" name="pass" class="form-control" placeholder="Пароль" required>
+            <input type="password" name="pass" class="form-control" placeholder="Пароль" >
         </div>
         <div class="form-group">
             <label for="passRetry" class="control-label">Повтор пароля</label>
-            <input type="password" name="passRetry" class="form-control" placeholder="Повтор пароля" required>
+            <input type="password" name="passRetry" class="form-control" placeholder="Повтор пароля" >
         </div>
         <button class="btn btn-lg btn-primary">Регистрация</button>
     </form>
