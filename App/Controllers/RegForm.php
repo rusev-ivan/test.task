@@ -7,9 +7,16 @@ use App\Controller;
 
 class RegForm extends Controller
 {
+    private $users;
+
+    public function __construct($users)
+    {
+        parent::__construct();
+        $this->users = $users;
+    }
+
     public function __invoke()
     {
-        $users = (include __DIR__ . '/../users.php');
 
         // Открываем файл для логирования
         $file = fopen('log.txt', 'a');
@@ -31,7 +38,7 @@ class RegForm extends Controller
         }
 
         //Проверка на существование введенного пользователя
-        $check = array_search($_POST['email'], array_column($users, 'email'));
+        $check = array_search($_POST['email'], array_column($this->users, 'email'));
         if ($check === false) {
             $status[] = 'success';
             if (!in_array('error', $status)) {
