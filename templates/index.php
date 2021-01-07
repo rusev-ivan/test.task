@@ -15,7 +15,7 @@
     <h1 class="font-weight-normal">Welcome to registration</h1>
 </div>
 <div>
-    <form class="form-reg" action="form.php" method="post">
+    <form class="form-reg" action="/regForm" method="post">
         <div class="form-group">
             <label for="name" class="control-label">Имя</label>
             <input type="text" name="name" class="form-control" placeholder="Имя" required autofocus>
