@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../App/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $url = $_SERVER ['REQUEST_URI'];
 $parts = explode('/', $url);
