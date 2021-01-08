@@ -2,12 +2,20 @@
 
 namespace App\Controllers;
 
-use App\Controller;
+use App\View;
 
-class Index extends Controller
+class Index
 {
+
+    protected $view;
+
+    public function __construct()
+    {
+        $this->view = new View();
+    }
+
     public function __invoke()
     {
-        $this->view->display(__DIR__ . '/../../templates/index.php');
+        $this->view->display('index.php');
     }
 }

@@ -1,15 +1,17 @@
 <?php
 
-
 namespace App;
-
-
 
 class View
 {
 
     protected $data = [];
+    protected $dirTemplates;
 
+    public function __construct()
+    {
+        $this->dirTemplates = __DIR__ . '/../templates/';
+    }
 
     public function __set($name, $value)
     {
@@ -29,7 +31,7 @@ class View
     public function render($template)
     {
         ob_start();
-        include $template;
+        include $this->dirTemplates .  $template;
         $content= ob_get_contents();
         ob_end_clean();
         return  $content;

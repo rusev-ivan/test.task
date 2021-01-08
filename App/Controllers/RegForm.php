@@ -2,16 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Controller;
-
-
-class RegForm extends Controller
+class RegForm
 {
     private $users;
 
     public function __construct($users)
     {
-        parent::__construct();
         $this->users = $users;
     }
 
