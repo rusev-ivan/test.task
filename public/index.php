@@ -2,6 +2,7 @@
 
 use App\Container;
 use App\Controllers\RegForm;
+use App\View;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -22,8 +23,12 @@ $users = [
 
 $container = new Container();
 $container->bind(RegForm::class, function (Container $container) use ($users)
-{
-    return new RegForm($users);
-});
+    {
+        return new RegForm($users);
+    });
+$container->bind(View::class, function (Container $container)
+    {
+        return new View(__DIR__ . '/../templates/');
+    });
 $ctrl = $container->get($class);
-$ctrl();
+$ctrl($container->get(View::class));

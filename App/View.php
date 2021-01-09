@@ -8,9 +8,9 @@ class View
     protected $data = [];
     protected $dirTemplates;
 
-    public function __construct()
+    public function __construct($dirTemplates)
     {
-        $this->dirTemplates = __DIR__ . '/../templates/';
+        $this->dirTemplates = $dirTemplates;
     }
 
     public function __set($name, $value)
