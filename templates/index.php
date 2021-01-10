@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/form.css?<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/form.css?">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -39,6 +39,6 @@
         <button class="btn btn-lg btn-primary">Регистрация</button>
     </form>
 </div>
-<script src="js/fetch.js?<?php echo time(); ?>"></script>
+<script src="js/fetch.js?"></script>
 </body>
 </html>

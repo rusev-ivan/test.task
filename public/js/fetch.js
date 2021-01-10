@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(jsonData);
                     if (jsonData.status == 'success') {
                         alert('Регистрация прошла успешно');
+                        form.reset(); // очищаем поля формы
                     }
                     else {
                         alert(jsonData.messages);
                     };
-                    //form.reset(); // очищаем поля формы
                 })
                 .catch((err) => console.error(err))
         });
