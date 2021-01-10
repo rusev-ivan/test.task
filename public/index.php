@@ -31,4 +31,4 @@ $container->bind(View::class, function (Container $container)
         return new View(__DIR__ . '/../templates/');
     });
 $ctrl = $container->get($class);
-$ctrl($container->get(View::class));
+$ctrl();

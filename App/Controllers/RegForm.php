@@ -53,7 +53,7 @@ class RegForm
 
         // Возвращаем ответ
         $data = ['status' => $status, 'messages' => $messages ?? null];
-        echo json_encode($data);
+        echo $jsonData = json_encode($data);
 
         fclose($file); //закрываем текстовый документ
     }

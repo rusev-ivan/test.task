@@ -39,7 +39,6 @@
         <button class="btn btn-lg btn-primary">Регистрация</button>
     </form>
 </div>
-<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="js/main.js?<?php echo time(); ?>"></script>
+<script src="js/fetch.js?<?php echo time(); ?>"></script>
 </body>
 </html>
